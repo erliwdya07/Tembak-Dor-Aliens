@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tembak Dor Aliens</title>
+	<script type="text/javascript" src="xorshift.js"></script>
+	<script type="text/javascript" src="Game.js"></script>
+	<script type="text/javascript" src="lib/easeljs-0.7.1.min.js"></script>
+	<script type="text/javascript" src="lib/preloadjs-0.4.1.min.js"></script>
+	<script type="text/javascript" src="createjs_game.js"></script>
+</head>
+<body style="background-color: #0000; color: #ffff" onload="init()">
+	<div id="header">
+		<h1>Tembak Dor Aliens</h1>
+	</div>
+	<canvas id="scratch" width="400px" height="400px" style="width: 400px; height: 400px;"></canvas>
+	<div id="text"></div>
+	<div id="savetext"></div>
+	<input type="button" value="Jeda" onclick="togglePause()"></input>
+	<p>
+	<input type="button" value="Pindah Tempat" onclick="document.getElementById('saveText').value = save()"></input>
+	<input type="button" value="Set tempat" onclick="load(document.getElementById('saveText').value)"></input>
+	<input type="button" value="ulang" onclick="reset()"></input>
+	Text game berseri:
+	<input id="saveText" type="text" value=""></input>
+	<hr>
+	<h1>Gini Cara Mainnya Guyssssss :</h1>
+	Game ini hanya menggunakan mouse anda cukup mengatur strategi.
+	<ol>
+		<li>Pertama, pilih kesulitan untuk memulai permainan.</li>
+		Anda bisa memilih tingkat kesulitan 0 dan 1 di awalannya.
+		Di level 1 tingkat kesulitan untuk memulai permainan lumayan suliut, jadi disarankan memulai permainan dari level 0 .
+		<li>Setelah memulai permainan, Anda bisa memindahkan menara dengan menyeret &amp; menjatuhkan.</li>
+		<li>Anda dapat membeli menara tambahan dengan menyeret dari ikon sisi kanan layar.</li>
+		<p>Kalau membeli menara tambahan membutuhkan biaya yang tinggi seiring dengan bertambahnya jumlah menara.</p>
+		<li>Anda juga dapat menjual menara yang tidak di butuhkan dengan menyeret &amp; menjatuhkan menara ke tempat sampah di sisi kanan bawah.</li>
+		<!-- <img src="html/purchase.jpg"> -->
+		<li>Tower mendapatkan pengalaman dan tumbuh lebih kuat saat membunuh musuh, jadi cobalah untuk menjaga tower tetap hidup selama mungkin .</li>
+		<li>Menara pengemas yang rapat dan mengelilingi menara yang lebih lemah dengan menara yang lebih kuat untuk perlindungan yang lebih baik..</li>
+		<li>Untuk kemajuan panggung ditampilkan dibagian bawah.</li>
+		<li>Setelah tahap selesai, menara anda akan secara otomatis disimpan.
+		Anda bisa melanjutkan kemajuan setelah memulai kembali browser.</li>
+		<li>Ketika anda ingin memulai ulang dari awal, tekan tombol ulang.
+			Kemajuan akan hilang.</li>
+		<li>Anda juga bisa menyimpan kemajuan sebagai tulisan JSON dengan menekan
+			tombol Next dan menyalin permainan berseri.</li>
+	</ol>
+	<hr>
+</body>
+</html>
